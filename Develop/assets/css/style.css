@@ -1,200 +1,273 @@
+/*
+=====================================================================
+*   Importing..
+*   Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
+===================================================================== 
+*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+    
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+header,footer,section {
+    display: block;
+ }
+
 body {
     background-color: #d9dcd6;
 }
 
-.header {
+header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
     color: #ffffff;
 }
 
-.header h1 {
+/*
+=====================================================================
+*   Menu - NavBar
+===================================================================== 
+*/
+.navbar-header {
+    overflow: hidden;
     display: inline-block;
     font-size: 48px;
+    color: #ffffff;
 }
 
-.header h1 .seo {
+.navbar-header .seo {
     color: #d9dcd6;
 }
 
-.header div {
-    padding-top: 15px;
+.links {
+    padding: 12px 20px;
     margin-right: 20px;
     float: right;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
 
-.header div ul {
-    list-style-type: none;
-}
-
-.header div ul li {
-    display: inline-block;
-    margin-left: 25px;
-}
-
-a {
+.links a {
+    text-decoration: none; /* remove text-underline */
     color: #ffffff;
-    text-decoration: none;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
 }
 
-p {
-    font-size: 16px;
+.links a:hover {
+    color: #084d77;
+    background-color: #ffffff;
 }
 
-.hero {
-    height: 800px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("../images/digital-marketing-meeting.jpg");
-    background-size: cover;
-    background-position: center;
+.links .icon {
+    display: none;
+    padding: 12px 20px;
+    margin-right: 20px;
 }
+/* =============================================================== */
+
 
 .float-left {
     float: left;
     margin-right: 25px;
+
+    max-width: 100%;
+    height: auto;
 }
 
 .float-right {
     float: right;
     margin-left: 25px;
+
+    max-width: 100%;
+    height: auto;
 }
 
+
+/*
+=====================================================================
+*   Image Background Section
+===================================================================== 
+*/
+.hero {
+    min-height: 800px;
+    max-width: 100%;
+    margin-bottom: 25px;
+    background: #161415 url("../images/digital-marketing-meeting.jpg") no-repeat top center;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+}
+/* =============================================================== */
+
+/*
+=====================================================================
+*   Content Section
+===================================================================== 
+*/
 .content {
-    width: 75%;
+    max-width: 100%;
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 0px;
 }
 
+.search-engine-optimization,
+.online-reputation-management,
+.social-media-marketing {
+    margin-bottom: 20px;
+    padding: 50px;
+    min-height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+.search-engine-optimization img,
+.online-reputation-management img,
+.social-media-marketing img {
+    max-height: 200px;
+}
+
+.search-engine-optimization h2,
+.online-reputation-management h2,
+.social-media-marketing h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.search-engine-optimization p,
+.online-reputation-management p,
+.social-media-marketing p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+/* =============================================================== */
+
+/*
+=====================================================================
+*   Benefits Section
+===================================================================== 
+*/
 .benefits {
-    margin-right: 20px;
+    /* margin-right: 20px; */
+    margin-right: 0px;
     padding: 20px;
     clear: both;
-    float: right;
-    width: 20%;
+    /* float: right; */
+    /* width: 20%; */
+    max-width: 100%;
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
+
+    margin-bottom: 10px;
 }
 
-.benefit-lead {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
+.benefit-lead,
+.benefit-brand,
 .benefit-cost {
     margin-bottom: 32px;
+    margin-left: 20px;
     color: #ffffff;
 }
 
-.benefit-lead h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
+.benefit-lead h3,
+.benefit-brand h3,
 .benefit-cost h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.benefit-lead img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
+.benefit-lead img,
+.benefit-brand img,
 .benefit-cost img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
+.benefit-lead p,
+.benefit-brand p,
+.benefit-cost p {
+    margin-bottom: 10px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 16px;
 }
+/* =============================================================== */
 
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
-    max-height: 200px;
-}
-
-.online-reputation-management img {
-    max-height: 200px;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.footer {
+/*
+=====================================================================
+*   Footer Section
+===================================================================== 
+*/
+footer {
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
 
-.footer h2 {
+.footer-row h2 {
     font-size: 20px;
+}
+/* =============================================================== */
+
+.images {
+    width: 100%;
+    height: auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+/*
+=====================================================================
+*   Media Query
+*
+*   Using a media query to add a break point at 1020px
+===================================================================== 
+*/
+@media screen and (max-width:1020px) {
+    /* Hiding menu text */
+    .nav>li>a {
+        display: none;
+    }
+    .links a.icon {
+        float: right;
+        display: block;
+    }
+
+    .hero {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:1020px) {
+    /* Dealing with responsive menu */
+    .links.responsive {
+        position: initial;
+        margin-right: 0;
+    }
+    .links.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: inline;
+    }
+    .links.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
 }
